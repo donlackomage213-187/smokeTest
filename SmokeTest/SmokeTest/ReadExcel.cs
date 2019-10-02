@@ -17,21 +17,22 @@ namespace SmokeTest
 {
 
 
-    public class Read_From_Excel
+    public class ReadExcel
     {
         public static MainWindow mainWinInstance;
-        private static bool hasNextButtonPressed=false;
 
-        public Read_From_Excel(MainWindow main)
+
+        public ReadExcel(MainWindow main)
         {
             mainWinInstance = main;
+            getExcelFile();
         }
         public static void getExcelFile()
         {
 
             //Create COM Objects. Create a COM object for everything that is referenced
             Excel.Application xlApp = new Excel.Application();
-            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\lazlo\Desktop\smokeTest.xlsx");
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"SmokeTestExcelFile\smokeTest.xlsx");
             Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
             Excel.Range xlRange = xlWorksheet.UsedRange;
 
@@ -40,7 +41,11 @@ namespace SmokeTest
 
             //iterate over the rows and columns and print to the console as it appears in the file
             //excel is not zero based!!
-            int row = 1;
+            int row = 3;
+            if (xlRange.Cells[2, 1] != null && xlRange.Cells[2, 1].Value2 != null)
+                mainWinInstance.tbAction.Text = (xlRange.Cells[2, 1].Value2.ToString());
+            if (xlRange.Cells[2, 2] != null && xlRange.Cells[2, 2].Value2 != null)
+                mainWinInstance.tbAction.Text = (xlRange.Cells[2, 2].Value2.ToString());
             while (row <= rowCount)
             {
 
@@ -69,6 +74,7 @@ namespace SmokeTest
                     Thread.Sleep(100);
                 }
                 mainWinInstance.ButtonPressed = false;
+                row++;
             }
 
 
@@ -94,5 +100,4 @@ namespace SmokeTest
         }
     }
 }
-}
-}
+

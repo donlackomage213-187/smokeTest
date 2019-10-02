@@ -13,5 +13,6 @@ namespace SmokeTest
     /// </summary>
     public partial class App : Application
     {
+       
     }
 }

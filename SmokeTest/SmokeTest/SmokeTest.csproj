@@ -91,6 +91,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="SmokeTestExcelFile\smokeTest.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -124,5 +125,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

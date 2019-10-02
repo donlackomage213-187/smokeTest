@@ -1,0 +1,14 @@
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest.csproj.ResolveComReference.cache
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\MainWindow.g.cs
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\App.g.cs
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest_MarkupCompile.cache
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest_MarkupCompile.lref
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\bin\Debug\SmokeTest.exe.config
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\bin\Debug\SmokeTest.exe
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\bin\Debug\SmokeTest.pdb
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\MainWindow.baml
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest.g.resources
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest.Properties.Resources.resources
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest.csproj.GenerateResource.cache
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest.exe
+C:\Users\lazlo\source\repos\SmokeTest\SmokeTest\obj\Debug\SmokeTest.pdb
