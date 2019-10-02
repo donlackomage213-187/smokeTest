@@ -1,0 +1,54 @@
+﻿<Window x:Name="window" x:Class="SmokeTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmokeTest"
+        mc:Ignorable="d"
+        Title="SmokeTest" Height="481.612" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="upMainDockPanel" Grid.Row="0" UseLayoutRounding="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" ForceCursor="True" OpacityMask="Black"  HorizontalAlignment="Center" Height="202" VerticalAlignment="Top" Width="792">
+
+            <Label Content="ACTION:" x:Name="actionTb" Margin="-0.245,0,0.245,176" FontFamily="Arial Black" FontSize="16" FontWeight="Bold" IsEnabled="False" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" Background="White" DockPanel.Dock="Top" Height="31.19" RenderTransformOrigin="0.486,0.871" Foreground="Black">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="4.322"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="2.298"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <StackPanel x:Name="upStack" VerticalAlignment="Center" Background="Red" Width="792" HorizontalAlignment="Stretch" Height="163" Margin="0,-163,0,0">
+                <TextBox x:Name="tbAction" Height="163" TextWrapping="Wrap" Text="TextBox" HorizontalAlignment="Stretch" VerticalAlignment="Center" IsTabStop="False" IsEnabled="False" UseLayoutRounding="True" VerticalContentAlignment="Stretch"/>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel x:Name="downMainDock" Grid.Row="1" UseLayoutRounding="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,0,20" >
+
+            <StackPanel x:Name="stackPanel" Orientation="Vertical" Background="Red"  HorizontalAlignment="Stretch"  Width="792" Margin="0,25,0,-16" >
+                <TextBox x:Name="tbExpected" Height="173"  TextWrapping="Wrap" Text="TextBox" HorizontalAlignment="Stretch"  IsTabStop="False" IsEnabled="False" UseLayoutRounding="True" VerticalContentAlignment="Stretch"/>
+                <Button x:Name="btNext" Content="Next" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="102"/>
+            </StackPanel>
+
+            <Label Content="EXPECTED:" x:Name="exceptedTb" Margin="-794.675,0,4.08,176" FontFamily="Arial Black" FontSize="16" FontWeight="Bold" IsEnabled="False" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" Background="White" DockPanel.Dock="Top" Height="31.19" RenderTransformOrigin="0.486,0.871" Foreground="Black">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="4.322"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="2.298"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Button Content="Button" Height="0" VerticalAlignment="Top" Width="75"/>
+
+        </DockPanel>
+    </Grid>
+</Window>
