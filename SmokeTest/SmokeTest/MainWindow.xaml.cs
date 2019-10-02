@@ -24,5 +24,12 @@ namespace SmokeTest
         {
             InitializeComponent();
         }
+        private bool buttonPressed;
+        public bool ButtonPressed { get {return buttonPressed; } set {buttonPressed=value; } }
+
+        private void btNext_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonPressed = true;
+        }
     }
 }

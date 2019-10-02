@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;       //microsoft Excel 14 object in references-> COM tab
+using System.Threading;
 
 namespace SmokeTest
 {
@@ -19,6 +20,7 @@ namespace SmokeTest
     public class Read_From_Excel
     {
         public static MainWindow mainWinInstance;
+        private static bool hasNextButtonPressed=false;
 
         public Read_From_Excel(MainWindow main)
         {
@@ -39,25 +41,34 @@ namespace SmokeTest
             //iterate over the rows and columns and print to the console as it appears in the file
             //excel is not zero based!!
             int row = 1;
-
-            for (int col = 1; col <= colCount; col++)
+            while (row <= rowCount)
             {
-                switch (col)
+
+
+                for (int col = 1; col <= colCount; col++)
                 {
-                    case 1:
-                        if (xlRange.Cells[row, col] != null && xlRange.Cells[row, col].Value2 != null)
-                            mainWinInstance.tbAction.Text=(xlRange.Cells[row, col].Value2.ToString());
-                        break;
-                    case 2:
-                        if (xlRange.Cells[row, col] != null && xlRange.Cells[row, col].Value2 != null)
-                            mainWinInstance.tbExpected.Text = (xlRange.Cells[row, col].Value2.ToString());
-                        break;
-                    default:
-                        break;
+                    switch (col)
+                    {
+                        case 1:
+                            if (xlRange.Cells[row, col] != null && xlRange.Cells[row, col].Value2 != null)
+                                mainWinInstance.tbAction.Text = (xlRange.Cells[row, col].Value2.ToString());
+                            break;
+                        case 2:
+                            if (xlRange.Cells[row, col] != null && xlRange.Cells[row, col].Value2 != null)
+                                mainWinInstance.tbExpected.Text = (xlRange.Cells[row, col].Value2.ToString());
+                            break;
+                        default:
+                            break;
+                    }
+
+                    //write the value to the console
+
                 }
-
-                //write the value to the console
-
+                while (!mainWinInstance.ButtonPressed)
+                {
+                    Thread.Sleep(100);
+                }
+                mainWinInstance.ButtonPressed = false;
             }
 
 

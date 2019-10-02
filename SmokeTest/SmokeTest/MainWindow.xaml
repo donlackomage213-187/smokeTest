@@ -34,7 +34,7 @@
 
             <StackPanel x:Name="stackPanel" Orientation="Vertical" Background="Red"  HorizontalAlignment="Stretch"  Width="792" Margin="0,25,0,-16" >
                 <TextBox x:Name="tbExpected" Height="173"  TextWrapping="Wrap" Text="TextBox" HorizontalAlignment="Stretch"  IsTabStop="False" IsEnabled="False" UseLayoutRounding="True" VerticalContentAlignment="Stretch"/>
-                <Button x:Name="btNext" Content="Next" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="102"/>
+                <Button x:Name="btNext" Content="Next" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="102" Click="btNext_Click"/>
             </StackPanel>
 
             <Label Content="EXPECTED:" x:Name="exceptedTb" Margin="-794.675,0,4.08,176" FontFamily="Arial Black" FontSize="16" FontWeight="Bold" IsEnabled="False" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" Background="White" DockPanel.Dock="Top" Height="31.19" RenderTransformOrigin="0.486,0.871" Foreground="Black">
